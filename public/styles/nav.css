@@ -1,0 +1,28 @@
+nav {
+  display: flex;
+  height: 120px;
+  background-color: #4056a1;
+  padding: 0 1.5em;
+  justify-content: space-between;
+}
+
+#tweeter-logo {
+  color: #ffffff;
+  font-family: 'Bungee', cursive;
+  align-self: center;
+}
+
+.write-new-tweet {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.write-new-tweet > div {
+  color: #ffffff;
+}
+
+i {
+  color: red;
+}
