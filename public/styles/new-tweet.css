@@ -36,3 +36,7 @@ form {
 .counter {
   font-family: 'Bungee', cursive;
 }
+
+.red-text {
+  color: red;
+}
