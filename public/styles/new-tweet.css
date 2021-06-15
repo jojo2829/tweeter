@@ -1,0 +1,38 @@
+.new-tweet {
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+#tweet-text {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid black;
+  resize: none;
+  height: auto;
+}
+
+#tweet-text:focus {
+  outline: none;
+}
+
+
+#submit-tweet {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+#submit-tweet > button {
+  background-color: #4056a1;
+  color: #ffffff;
+  font-family: 'Bungee', cursive;
+}
+
+.counter {
+  font-family: 'Bungee', cursive;
+}
