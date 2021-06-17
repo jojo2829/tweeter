@@ -5,6 +5,8 @@
  */
 $(document).ready(function () {
 
+  $(".error").hide();
+
   const renderTweets = function(tweets) {
 
     for (const tweet in tweets) {
@@ -95,9 +97,10 @@ $(document).ready(function () {
       .then(() => {
         newTweet();
         $("form").trigger("reset");
+        $(".error").hide();
       });
     } else {
-      alert("Tweet cannot be empty or over 140 characters!");
+      $(".error").slideDown();
     }
   });
   loadTweets();
