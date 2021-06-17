@@ -6,16 +6,15 @@
 $(document).ready(function () {
 
   const renderTweets = function(tweets) {
-  
+    
     for (const tweet in tweets) {
       const $tweet = createTweetElement(tweets[tweet]);
       $('.articles-container').prepend($tweet);
     }
-  
   };
     
   const createTweetElement = function(tweet) {
-  
+
     let $tweet = $(`
       <article class="tweet">
         <header>
@@ -58,8 +57,6 @@ $(document).ready(function () {
       url
     })
     .then((result) => {
-      console.log("current result: ", result.length);
-      
       renderTweets(result);
     })
     .catch(err => {
@@ -101,7 +98,6 @@ $(document).ready(function () {
       alert("Tweet cannot be empty or over 140 characters!");
     }
   });
-
   loadTweets();
 });
 
