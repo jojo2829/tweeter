@@ -1,0 +1,50 @@
+article {
+  border: 2px solid black;
+  padding: 10px;
+  margin: 24px 0;
+}
+
+article:hover {
+  box-shadow: 10px 10px lightgrey;
+}
+
+article.tweet header {
+  display: flex;
+  height: 100px;
+  background-color: inherit;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.article-profile {
+  display: flex;
+  align-items: center;
+}
+
+article.tweet img {
+  height: 80px;
+}
+
+.article-user-id {
+  color: grey;
+}
+
+article p {
+  padding: 0 24px;
+}
+
+.article-footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: 2px solid black;
+  padding-top: 10px;
+}
+
+.article-icons i {
+  color: #4056a1;;
+}
+
+.article-icons i:hover {
+  color: orange;
+  cursor: pointer;
+}
