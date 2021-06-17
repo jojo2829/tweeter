@@ -7,13 +7,16 @@ article {
 article:hover {
   box-shadow: 10px 10px lightgrey;
 }
+article:hover .article-user-id {
+  text-shadow: 1px 1px lightgrey;
+}
 
 article.tweet header {
   display: flex;
   height: 100px;
   background-color: inherit;
-  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 
 .article-profile {
@@ -31,9 +34,10 @@ article.tweet img {
 
 article p {
   padding: 0 24px;
+  word-wrap: break-word;
 }
 
-.article-footer {
+article.tweet footer {
   display: flex;
   justify-content: space-between;
   border-top: 2px solid black;

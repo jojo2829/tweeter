@@ -1,4 +1,4 @@
-header {
+body > header {
   display: flex;
   background-color: #d2c38e;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");

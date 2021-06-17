@@ -26,6 +26,21 @@ nav {
   color: #ffffff;
 }
 
-i {
+.fa-angle-double-down {
   color: red;
+  animation: updown 2s ease infinite;
+}
+
+@keyframes updown {
+  0% {
+    transform: translateY(-10%);
+  }
+
+  50% {
+    transform: translateY(10%);
+  }
+
+  100% {
+    transform: translateY(-10%);
+  }
 }
