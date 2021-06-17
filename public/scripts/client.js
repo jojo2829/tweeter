@@ -6,7 +6,7 @@
 $(document).ready(function () {
 
   const renderTweets = function(tweets) {
-    
+
     for (const tweet in tweets) {
       const $tweet = createTweetElement(tweets[tweet]);
       $('.articles-container').prepend($tweet);
@@ -14,7 +14,8 @@ $(document).ready(function () {
   };
     
   const createTweetElement = function(tweet) {
-
+    let $cleanedText = $('<span></span>');
+    $cleanedText.text(tweet.content.text);
     let $tweet = $(`
       <article class="tweet">
         <header>
@@ -25,7 +26,7 @@ $(document).ready(function () {
           <span class="article-user-id"><b>${tweet.user.handle}</b></span>
         </header>
         <p>
-          ${tweet.content.text}
+          ${$cleanedText[0].innerHTML}
         </p>
         <footer>
           <span>${timeago.format(tweet.created_at)}</span>
@@ -39,6 +40,8 @@ $(document).ready(function () {
     `);
     return $tweet;
   };
+
+
 
   const validateForm = function(data) {
     const msg = data.slice(5);
@@ -73,7 +76,6 @@ $(document).ready(function () {
     })
     .then((result) => {
       const newTweet = result[result.length - 1];
-      console.log("current result: ", newTweet);
       $('.articles-container').prepend(createTweetElement(newTweet));
     });
   };
