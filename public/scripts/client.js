@@ -96,13 +96,16 @@ $(document).ready(function () {
       })
       .then(() => {
         newTweet();
-        $("form").trigger("reset");
+        // $("form")[0].reset()
+        $("#tweet-text").val("");
+        $("#word-count").text("140");
         $(".error").hide();
-      });
-    } else {
+      })} else {
       $(".error").slideDown();
     }
   });
+
+
   loadTweets();
 });
 
