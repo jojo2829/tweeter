@@ -17,6 +17,8 @@ article.tweet header {
   background-color: inherit;
   justify-content: space-between;
   align-items: center;
+  margin: unset;
+  width: 100%;
 }
 
 .article-profile {

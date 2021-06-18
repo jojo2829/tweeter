@@ -3,9 +3,20 @@
   flex-direction: column;
 }
 
+.error {
+  border: 2px solid red;
+  color: red;
+  padding: 1%;
+  margin: 2%;
+}
+
 form {
   display: flex;
   flex-direction: column;
+}
+
+#humming {
+  margin-top: 5%;
 }
 
 #tweet-text {
