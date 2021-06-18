@@ -9,7 +9,7 @@ $(document).ready(function () {
   $("form").hide();
 
   $("#angle-down-form").click(function() {
-    $("form").slideDown();
+    $("form").slideToggle();
   });
 
   const renderTweets = function(tweets) {

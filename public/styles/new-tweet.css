@@ -16,6 +16,10 @@ form {
   flex-direction: column;
 }
 
+textarea::placeholder {
+  font-weight: 600;
+}
+
 #tweet-text {
   background: transparent;
   border: none;
