@@ -1,7 +1,6 @@
 .new-tweet {
   display: flex;
   flex-direction: column;
-  margin: 50px 0;
 }
 
 .error {
@@ -16,6 +15,10 @@ form {
   flex-direction: column;
 }
 
+#humming {
+  margin-top: 5%;
+}
+
 #tweet-text {
   background: transparent;
   border: none;
@@ -28,6 +31,7 @@ form {
   outline: none;
 }
 
+
 #submit-tweet {
   display: flex;
   justify-content: space-between;
@@ -37,11 +41,11 @@ form {
 #submit-tweet > button {
   background-color: #4056a1;
   color: #ffffff;
-  font-family: "Bungee", cursive;
+  font-family: 'Bungee', cursive;
 }
 
 .counter {
-  font-family: "Bungee", cursive;
+  font-family: 'Bungee', cursive;
 }
 
 .red-text {

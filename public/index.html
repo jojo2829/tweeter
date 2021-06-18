@@ -42,7 +42,7 @@
           <span><b>Write</b> a new tweet</span>
         </div>
         <div>
-          <i class="fas fa-angle-double-down"></i>
+          <i class="fas fa-angle-double-down" id="angle-down-form"></i>
         </div>
       </div>
     </nav>
@@ -65,8 +65,7 @@
           <i class="fas fa-exclamation-triangle"></i>
         </div>
         <form method="POST" action="/tweets">
-          <label for="tweet-text" id="humming"><b>What are you humming about?</b></label>
-          <textarea name="text" id="tweet-text"></textarea>
+          <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
           <div id="submit-tweet">
             <button type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text"><span id="word-count">140</span></output>

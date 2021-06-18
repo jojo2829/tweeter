@@ -6,6 +6,11 @@
 $(document).ready(function () {
 
   $(".error").hide();
+  $("form").hide();
+
+  $("#angle-down-form").click(function() {
+    $("form").slideDown();
+  });
 
   const renderTweets = function(tweets) {
 

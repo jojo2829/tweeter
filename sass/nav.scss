@@ -1,0 +1,47 @@
+nav {
+  display: flex;
+  height: 120px;
+  background-color: #4056a1;
+  padding: 0 1.5em;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  #tweeter-logo {
+    color: #ffffff;
+    font-family: 'Bungee', cursive;
+    align-self: center;
+  }
+
+  .write-new-tweet {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    div {
+      color: #ffffff;
+    }
+  }
+  
+  .fa-angle-double-down {
+    color: red;
+    animation: updown 2s ease infinite;
+  }
+
+}
+
+@keyframes updown {
+  0% {
+    transform: translateY(-10%);
+  }
+
+  50% {
+    transform: translateY(10%);
+  }
+
+  100% {
+    transform: translateY(-10%);
+  }
+}

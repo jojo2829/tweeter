@@ -11,7 +11,7 @@ nav {
 
 #tweeter-logo {
   color: #ffffff;
-  font-family: 'Bungee', cursive;
+  font-family: "Bungee", cursive;
   align-self: center;
 }
 
@@ -31,15 +31,17 @@ nav {
   animation: updown 2s ease infinite;
 }
 
+.fa-angle-double-down:hover {
+  cursor: pointer;
+}
+
 @keyframes updown {
   0% {
     transform: translateY(-10%);
   }
-
   50% {
     transform: translateY(10%);
   }
-
   100% {
     transform: translateY(-10%);
   }
