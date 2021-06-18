@@ -12,6 +12,7 @@ $(document).ready(function () {
     $("form").slideToggle();
   });
 
+  //renders pre-exist tweet posts
   const renderTweets = function(tweets) {
 
     for (const tweet in tweets) {
@@ -19,7 +20,7 @@ $(document).ready(function () {
       $('.articles-container').prepend($tweet);
     }
   };
-    
+
   const createTweetElement = function(tweet) {
     let $cleanedText = $('<span></span>');
     $cleanedText.text(tweet.content.text);
@@ -48,10 +49,8 @@ $(document).ready(function () {
     return $tweet;
   };
 
-
-
   const validateForm = function(data) {
-    const msg = data.slice(5);
+    const msg = unescape(data.slice(5));
 
     if (!msg || msg.length > 140) {
       return false;
@@ -59,6 +58,7 @@ $(document).ready(function () {
     return true;
   };
 
+  //loads pre-exists tweets
   const loadTweets = function() {
     const url = "/tweets";
 
@@ -74,6 +74,7 @@ $(document).ready(function () {
     });
   };
 
+  //loads new created tweet
   const newTweet = function() {
     const url = "/tweets";
 
@@ -87,6 +88,7 @@ $(document).ready(function () {
     });
   };
 
+  //submit new tweet
   $("form").submit(function(event) {
     event.preventDefault();
 
@@ -101,15 +103,13 @@ $(document).ready(function () {
       })
       .then(() => {
         newTweet();
-        // $("form")[0].reset()
         $("#tweet-text").val("");
         $("#word-count").text("140");
         $(".error").hide();
       })} else {
-      $(".error").slideDown();
+        $(".error").slideDown();
     }
   });
-
 
   loadTweets();
 });
